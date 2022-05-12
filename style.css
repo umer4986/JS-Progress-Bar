@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color:  	#E8EAEA;
+}
+
+.container{
+    text-align: center;
+
+}
+
+.progress-container{
+    width:500px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.progress-bar-back{
+       margin:0;
+       top:50%;
+       transform: translateY(-50%);
+       position: absolute;
+       height: 3px;
+       width:100%;
+       background-color: lightgray;
+       border:none;
+       z-index: -1;
+}
+
+.progress-bar-front{
+    margin:0;
+    top:50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: 3px;
+    width:0%;
+    background-color: green;
+    border:none;
+    z-index: -1;
+    transition: .5s;
+}
+
+.step{
+    width:30px;
+    height:30px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid lightgray;
+    color:lightgray ;
+}
+
+.step.checked{
+    color:green;
+    border-color: green;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+
+.step.checked small{
+    position: absolute;
+    bottom:-20px;
+}
+
+.btn{
+    background-color:  	#51a1c4;
+    border:none;
+    color: white;
+    padding:2px 8px;
+    margin:30px 10px;
+    border-radius: 4px;
+    cursor:pointer;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.5) ;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn:active{
+    transform: scale(92%);
+}
+
+.btn:disabled{
+    background-color:lightslategray;
+}
+
+@media(max-width:500px){
+    .progress-container{
+        width:90vw;
+    }
+}
